@@ -101,16 +101,16 @@
                 </div>
                 <div class="container options">
                     <p id="question" class="question">Q1. What type of branding services do you need?</p>
-                    <div id="first_option" class="option_con">
+                    <div id="first_option" class="option_con target">
                         <p>Answer Choice #1</p>
                     </div>
-                    <div id="second_option" class="option_con">
+                    <div id="second_option" class="option_con target">
                         <p>Answer Choice #2</p>
                     </div>
-                    <div id="three_option" class="option_con">
+                    <div id="three_option" class="option_con target">
                         <p>Answer Choice #3</p>
                     </div>
-                    <div  id="fourth_option" class="option_con" style="visibility: hidden;">
+                    <div  id="fourth_option" class="option_con target" style="visibility: hidden;">
                         <p>Testing #4</p>
                     </div>
                 </div>
@@ -185,44 +185,6 @@
         <link href="css/estimator.css" rel="stylesheet" type="text/css"/>
         <!-- Favicon -->        
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>       
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $("#contact_form").validate({
-
-                });
-            });
-
-            $("#form_submit").on('click', function (event) {
-                if ($('#contact_form').valid()) {
-                    event.preventDefault();
-                    var name = $("#name").val();
-                    var email = $("#email").val();
-                    var phone = $("#phone").val();
-                    var company = $("#company").val();
-                    var service_need = $("#service_need").val();
-                    var budget = $("#budget").val();
-                    var message = $("#message").val();
-
-                    $.post("save.php", {
-                        name: name,
-                        email: email,
-                        phone: phone,
-                        company: company,
-                        service_need: service_need,
-                        budget: budget,
-                        message: message
-                    },
-                        function (result) {
-                            $(".message").html("<p>Your contact information was received!<br>Please allow us 24-48 hours to follow up with you. Thanks!</p> ");
-                            $("#contact_form").trigger('reset');
-
-                        });
-                }
-            });
-        </script>
         <script src="js/jquery.back-to-top.min.js"></script>
         <script src="js/slick.js"></script> 
         <script src="js/main.js"></script> 
