@@ -1,5 +1,7 @@
 # projectdollar
-Project $ - Website Module Application Project
+Name: Project $ - Website Module Application Project
+
+Description:
 
 Project List:
 - Add "Next" Button
