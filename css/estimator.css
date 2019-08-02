@@ -54,13 +54,14 @@ header{
     position: absolute;
     text-align: center;
     top: 85%;
-    width: 100%;
+    width: 90%;
     height: 100%;
-    margin: auto;    
+    margin: 0 5%;    
 }
 .full-height-bg .container.buttons .button{
     background-color: #ED2A7A;
     padding: 15px;
+    cursor: pointer;
 }
 .option_con{
     border: 1px solid #E4EAED;
@@ -68,10 +69,11 @@ header{
     vertical-align: center;
     display: flex;
     float: left;
-    width: 23.1%;
+    width: 28.3%;
     height: 40%;
     margin: 5% 2.5%;
     padding: 2.5%;
+    transition: all .3s;
     -webkit-transition: all .3s;
 }
 .option_con:hover{border: 1px solid #ED2A7A;}

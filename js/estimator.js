@@ -6,18 +6,52 @@ Website:    https://www.bkreative.net
 Version:    1.0.0
 */
 
-//Call the Variables
+//Estimate Variables
 var price = 0;
 
-//Call the Elements
-var question1 = document.getElementById('selection1');
-var question2 = document.getElementById('selection2');
-var question3 = document.getElementById('selection3');
-var question4 = document.getElementById('selection4');
-var question5 = document.getElementById('selection5');
-var question6 = document.getElementById('selection6');
-var question7 = document.getElementById('selection7');
-var question8 = document.getElementById('selection8');
-var question9 = document.getElementById('selection9');
+//Question Element Container
+var questionElement = document.getElementById('options');
 
 //Begin Estimator Questionnaire
+
+//Estimate Animations
+function nextQuestion(){
+    questionElement.style.overflow = "hidden";
+    questionElement.style.opacity = 1.0;
+    setInterval(questionAnimationUp, 35);
+    //setInterval(questionAnimationDown, 35);
+}
+
+function previousQuestion(){
+    questionElement.clientHeight == "0";
+}
+
+function questionAnimationUp(){
+    var questionHeight =  questionElement.clientHeight;
+    var questionOpacity = questionElement.style.opacity;
+    if((questionHeight>0)&&(questionOpacity>0)){
+        questionHeight = questionHeight / 2;
+        questionOpacity = questionOpacity - .05;
+        questionElement.style.height = questionHeight + "px";
+        questionElement.style.opacity = questionOpacity;
+        //alert("Up - opacity: " + questionOpacity + " || height: " + questionHeight);
+    }
+    else{
+        clearInterval()
+    }
+}
+
+function questionAnimationDown(){
+    var questionHeight =  questionElement.clientHeight;
+    var questionOpacity = questionElement.style.opacity;
+    if((questionHeight<379)&&(questionOpacity<1)){
+        questionHeight = (questionHeight + 1) * 2;
+        questionOpacity = questionOpacity + .05;
+        questionElement.style.height = questionHeight + "px";
+        questionElement.style.opacity = questionOpacity;
+        alert("Down - opacity: " + questionOpacity + " || height: " + questionHeight);
+    }
+    else{
+        clearInterval()
+    }
+}

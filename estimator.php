@@ -99,7 +99,7 @@
                     <h2>BRANDING ESTIMATE <span class="pink">CALCULATOR</span></h2>
                     <span class="desc">The Branding Estimate Calculator was created to help potential clients understand their <strong>digital branding cost.</strong></span>
                 </div>
-                <div class="container options">
+                <div id="options" class="container options">
                     <p id="question" class="question">Q1. What type of branding services do you need?</p>
                     <div id="first_option" class="option_con target">
                         <p>Answer Choice #1</p>
@@ -115,8 +115,8 @@
                     </div>
                 </div>
                 <div class="container buttons">
-                    <div id="previous" class="button left">Previous</div>
-                    <div id="next" class="button right">Next</div>
+                    <div id="previous" class="button left" onClick="previousQuestion();">Previous</div>
+                    <div id="next" class="button right" onClick="nextQuestion();">Next</div>
                 </div>
             </div> 
         </section>
