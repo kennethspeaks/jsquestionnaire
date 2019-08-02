@@ -4,7 +4,7 @@ Name: Project $ - Website Module Application Project
 Description:
 
 Contributors:
-- Ken Elliott (<a href="twitter.com/kennethspeaks">@kennethspeaks</a>): Lead Contributor/Developer
+- Ken Elliott (<a href="https://www.twitter.com/kennethspeaks">@kennethspeaks</a>): Lead Contributor/Developer
 
 Upcoming Task List:
 - Add "Next" Button
