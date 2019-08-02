@@ -110,9 +110,13 @@
                     <div id="three_option" class="option_con target">
                         <p>Answer Choice #3</p>
                     </div>
-                    <div  id="fourth_option" class="option_con target" style="visibility: hidden;">
+                    <div  id="fourth_option" class="option_con target" style="display: none;">
                         <p>Testing #4</p>
                     </div>
+                </div>
+                <div class="container buttons">
+                    <div id="previous" class="button left">Previous</div>
+                    <div id="next" class="button right">Next</div>
                 </div>
             </div> 
         </section>

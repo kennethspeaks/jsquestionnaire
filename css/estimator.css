@@ -28,7 +28,7 @@ header{
 .full-height-bg .container.title{
     position: absolute;
     text-align: center;
-    top: 21%;
+    top: 15%;
     width: 100%;
     height: 100%;
     margin: auto;
@@ -41,7 +41,7 @@ header{
 .full-height-bg .container.options{
     position: relative;
     text-align: center;
-    top: 29%;
+    top: 25%;
     width: 95%;
     height: 100%;
     margin: auto;
@@ -50,20 +50,32 @@ header{
     font-size: 18px;
     font-weight: bold;
 }
+.full-height-bg .container.buttons{
+    position: absolute;
+    text-align: center;
+    top: 85%;
+    width: 100%;
+    height: 100%;
+    margin: auto;    
+}
+.full-height-bg .container.buttons .button{
+    background-color: #ED2A7A;
+    padding: 15px;
+}
 .option_con{
     border: 1px solid #E4EAED;
     border-radius: 15px;
     vertical-align: center;
     display: flex;
     float: left;
-    width: 28.3%;
+    width: 23.1%;
     height: 40%;
     margin: 5% 2.5%;
     padding: 2.5%;
     -webkit-transition: all .3s;
 }
 .option_con:hover{border: 1px solid #ED2A7A;}
-.option_con:active{border: 3px solid #ED2A7A;}
+.option_con:target{border: 3px solid #ED2A7A;}
 
 /* FOOTER */
 footer{
