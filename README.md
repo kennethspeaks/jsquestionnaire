@@ -1,7 +1,7 @@
 # projectdollar (P$)
 <strong>Name:</strong> Project $ - Website Module Application Project
 
-Description:</strong>
+<strong>Description:</strong>
 
 <strong>Contributors:</strong>
 - Ken Elliott (<a href="https://www.twitter.com/kennethspeaks">@kennethspeaks</a>): Lead Contributor/Developer
