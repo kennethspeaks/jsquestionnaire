@@ -1,12 +1,12 @@
-# projectdollar
-Name: Project $ - Website Module Application Project
+# projectdollar (P$)
+<strong>Name:</strong> Project $ - Website Module Application Project
 
-Description:
+Description:</strong>
 
-Contributors:
+<strong>Contributors:</strong>
 - Ken Elliott (<a href="https://www.twitter.com/kennethspeaks">@kennethspeaks</a>): Lead Contributor/Developer
 
-Upcoming Task List:
+<strong>Upcoming Task List:</strong>
 - Add "Next" Button
 - Create "Progress Bar" Functionality
 - Add "Previous" Functionality
