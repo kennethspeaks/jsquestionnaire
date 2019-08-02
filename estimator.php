@@ -189,6 +189,7 @@
         <link href="css/estimator.css" rel="stylesheet" type="text/css"/>
         <!-- Favicon -->        
         
+        <script src="js/estimator.js"></script>
         <script src="js/jquery.back-to-top.min.js"></script>
         <script src="js/slick.js"></script> 
         <script src="js/main.js"></script> 
