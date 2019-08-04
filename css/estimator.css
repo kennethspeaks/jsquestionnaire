@@ -46,7 +46,7 @@ header{
     height: 100%;
     margin: auto;
 }
-.full-height-bg .container.options p.question{
+.full-height-bg .container.options p.question, .full-height-bg .container.options .answer{
     font-size: 18px;
     font-weight: bold;
 }
@@ -67,7 +67,7 @@ header{
     border: 1px solid #E4EAED;
     border-radius: 15px;
     vertical-align: center;
-    display: flex;
+    display: grid;
     float: left;
     width: 28.3%;
     height: 40%;

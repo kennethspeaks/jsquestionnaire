@@ -100,18 +100,26 @@
                     <span class="desc">The Branding Estimate Calculator was created to help potential clients understand their <strong>digital branding cost.</strong></span>
                 </div>
                 <div id="options" class="container options">
-                    <p id="question" class="question">Q1. What type of branding services do you need?</p>
+                    <p id="question" class="question">Q1. What type of branding service are you looking for?</p>
                     <div id="first_option" class="option_con target">
-                        <p>Answer Choice #1</p>
+                        <img src="" alt="">
+                        <p class="answer">Answer Choice #1</p>
+                        <p>Answer Choice Description #1</p>
                     </div>
                     <div id="second_option" class="option_con target">
-                        <p>Answer Choice #2</p>
+                    <img src="" alt="">
+                        <p class="answer">Answer Choice #2</p>
+                        <p>Answer Choice Description #2</p>
                     </div>
                     <div id="three_option" class="option_con target">
-                        <p>Answer Choice #3</p>
+                        <img src="" alt="">
+                        <p class="answer">Answer Choice #3</p>
+                        <p>Answer Choice Description #3</p>
                     </div>
                     <div  id="fourth_option" class="option_con target" style="display: none;">
-                        <p>Testing #4</p>
+                        <img src="" alt="">
+                        <p class="answer">Answer Choice #4</p>
+                        <p>Answer Choice Description #4</p>
                     </div>
                 </div>
                 <div class="container buttons">
