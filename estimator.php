@@ -123,8 +123,8 @@
                     </div>
                 </div>
                 <div class="container buttons">
-                    <div id="previous" class="button left" onClick="previousQuestion();">Previous</div>
-                    <div id="next" class="button right" onClick="nextQuestion();">Next</div>
+                    <div id="previous" class="button left" onClick="previousQuestion();">◄ Previous</div>
+                    <div id="next" class="button right" onClick="nextQuestion();">Next ►</div>
                 </div>
             </div> 
         </section>

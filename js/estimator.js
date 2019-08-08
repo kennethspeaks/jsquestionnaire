@@ -12,12 +12,16 @@ var price = 0;
 //Question Element Container
 var questionElement = document.getElementById('options');
 
-//Begin Estimator Questionnaire
+
+/*************************************/
+/*** Begin Estimator Questionnaire ***/
+/*************************************/
 
 //Estimate Animations
 function nextQuestion(){
     questionElement.style.overflow = "hidden";
     questionElement.style.opacity = 1.0;
+    questionElement.style.top = "25%";
     setInterval(questionAnimationUp, 35);
     //setInterval(questionAnimationDown, 35);
 }
@@ -27,14 +31,18 @@ function previousQuestion(){
 }
 
 function questionAnimationUp(){
-    var questionHeight =  questionElement.clientHeight;
+    //Create Variables for Height, Opacity, & Top
     var questionOpacity = questionElement.style.opacity;
-    if((questionHeight>0)&&(questionOpacity>0)){
-        questionHeight = questionHeight / 2;
+    var questionTop = questionElement.style.top;
+    
+    //Remove the "%" From The Variable And Convert It Into A Number
+    questionTop = questionTop.substring(0, questionTop.length - 1);
+    
+    if(questionOpacity>0){
         questionOpacity = questionOpacity - .05;
-        questionElement.style.height = questionHeight + "px";
+        questionTop = questionTop - 0.5; 
         questionElement.style.opacity = questionOpacity;
-        //alert("Up - opacity: " + questionOpacity + " || height: " + questionHeight);
+        questionElement.style.top = questionTop + "%";
     }
     else{
         clearInterval()
@@ -54,4 +62,13 @@ function questionAnimationDown(){
     else{
         clearInterval()
     }
+}
+
+
+//Key Listener
+document.onkeydown = checkKey;
+function checkKey(e){
+    e = e || window.event;
+    if (e.keyCode == '37'){previousQuestion();}
+    if (e.keyCode == '39'){nextQuestion();}
 }
