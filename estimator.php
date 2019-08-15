@@ -101,29 +101,36 @@
                 </div>
                 <div id="options" class="container options">
                     <p id="question" class="question">Q1. What type of branding service are you looking for?</p>
-                    <div id="first_option" class="option_con target">
+                    <input type="radio" id="first_option" name="options">
+                    <label for="first_option" class="option_con target">
                         <img src="" alt="">
                         <p class="answer">Answer Choice #1</p>
                         <p>Answer Choice Description #1</p>
-                    </div>
-                    <div id="second_option" class="option_con target">
-                    <img src="" alt="">
+                    </label>
+                    <input type="radio" id="second_option" name="options">
+                    <label for="second_option" class="option_con target">
+                        <img src="" alt="">
                         <p class="answer">Answer Choice #2</p>
                         <p>Answer Choice Description #2</p>
-                    </div>
-                    <div id="three_option" class="option_con target">
+                    </label>
+                    <input type="radio" id="third_option" name="options">
+                    <label for="third_option" class="option_con target">
                         <img src="" alt="">
                         <p class="answer">Answer Choice #3</p>
                         <p>Answer Choice Description #3</p>
-                    </div>
-                    <div  id="fourth_option" class="option_con target" style="display: none;">
+                    </label>
+                    <input type="radio" id="fourth_option" name="options">
+                    <label for="fourth_option" class="option_con target" style="display: none;">
                         <img src="" alt="">
                         <p class="answer">Answer Choice #4</p>
                         <p>Answer Choice Description #4</p>
-                    </div>
+                    </label>
+                </div>
+                <div class="container totalprice">
+                    <div class="price right">Estimated Cost: $<span id="price" class="pink">0.00</span></div>
                 </div>
                 <div class="container buttons">
-                    <div id="previous" class="button left" onClick="previousQuestion();">◄ Previous</div>
+                    <div id="previous" class="button left" onClick="previousQuestion();">◄ Back</div>
                     <div id="next" class="button right" onClick="nextQuestion();">Next ►</div>
                 </div>
             </div> 

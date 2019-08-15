@@ -7,10 +7,15 @@ Version:    1.0.0
 */
 
 //Estimate Variables
-var price = 0;
+var price;
+var question;
 
 //Question Element Container
 var questionElement = document.getElementById('options');
+var optionOne = document.getElementById('first_option');
+var optionTwo = document.getElementById('second_option');
+var optionThree = document.getElementById('third_option');
+var optionFour = document.getElementById('fourth_option');
 
 
 /*************************************/
@@ -19,11 +24,14 @@ var questionElement = document.getElementById('options');
 
 //Estimate Animations
 function nextQuestion(){
-    questionElement.style.overflow = "hidden";
-    questionElement.style.opacity = 1.0;
-    questionElement.style.top = "25%";
-    setInterval(questionAnimationUp, 35);
-    //setInterval(questionAnimationDown, 35);
+    var validation = answerValidation();
+    if (validation){
+        questionElement.style.overflow = "hidden";
+        questionElement.style.opacity = 1.0;
+        questionElement.style.top = "25%";
+        setInterval(questionAnimationUp, 35);
+        //setInterval(questionAnimationDown, 35);
+    }
 }
 
 function previousQuestion(){
@@ -64,6 +72,12 @@ function questionAnimationDown(){
     }
 }
 
+//Validation
+function answerValidation(){
+    //Confirms An Answer Has Been Selected
+    let validation = (optionOne.checked || optionTwo.checked || optionThree.checked || optionFour.checked) ? true : false;
+    return validation;
+}
 
 //Key Listener
 document.onkeydown = checkKey;
