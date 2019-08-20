@@ -7,75 +7,69 @@ Version:    1.0.0
 */
 
 //Estimate Variables
-var price;
-var question;
+var price = 0;
+var validation = false;
+var questionNumber = 0;
 
 //Question Element Container
 var questionElement = document.getElementById('options');
+var questionQuestion = document.getElementById('question');
 var optionOne = document.getElementById('first_option');
 var optionTwo = document.getElementById('second_option');
 var optionThree = document.getElementById('third_option');
 var optionFour = document.getElementById('fourth_option');
 
+const questions = [
+    ["Q1. What type of branding service are you looking for?", "A1", "A2", "A3", "A4"],
+    ["Q2. Testing Question 2", "A1", "A2", "A3", "A4"],
+    ["Q3. Testing Question 3", "A1", "A2", "A3", "A4"],
+    ["Q4. Testing Question 4", "A1", "A2", "A3", "A4"],
+    ["Q5. Testing Question 5", "A1", "A2", "A3", "A4"],
+    ["Q6. Testing Question 6", "A1", "A2", "A3", "A4"],
+    ["Q7. Testing Question 7", "A1", "A2", "A3", "A4"],
+    ["Q8. Testing Question 8", "A1", "A2", "A3", "A4"],
+    ["Q9. Testing Question 9", "A1", "A2", "A3", "A4"],
+    ["Q10. Testing Question 10", "A1", "A2", "A3", "A4"]
+];
 
 /*************************************/
 /*** Begin Estimator Questionnaire ***/
 /*************************************/
 
-//Estimate Animations
+//Question Animations
 function nextQuestion(){
-    var validation = answerValidation();
+    validation = answerValidation();
     if (validation){
-        questionElement.style.overflow = "hidden";
-        questionElement.style.opacity = 1.0;
-        questionElement.style.top = "25%";
-        setInterval(questionAnimationUp, 35);
-        //setInterval(questionAnimationDown, 35);
+        questionElement.className = "container options transitionOut";
+        setTimeout(function(){
+            questionNumber++;
+            questionElement.className = "container options transitionIn";
+            questionQuestion.innerHTML = questions[questionNumber][0];}, 750);
     }
 }
 
 function previousQuestion(){
-    questionElement.clientHeight == "0";
-}
-
-function questionAnimationUp(){
-    //Create Variables for Height, Opacity, & Top
-    var questionOpacity = questionElement.style.opacity;
-    var questionTop = questionElement.style.top;
-    
-    //Remove the "%" From The Variable And Convert It Into A Number
-    questionTop = questionTop.substring(0, questionTop.length - 1);
-    
-    if(questionOpacity>0){
-        questionOpacity = questionOpacity - .05;
-        questionTop = questionTop - 0.5; 
-        questionElement.style.opacity = questionOpacity;
-        questionElement.style.top = questionTop + "%";
-    }
-    else{
-        clearInterval()
-    }
-}
-
-function questionAnimationDown(){
-    var questionHeight =  questionElement.clientHeight;
-    var questionOpacity = questionElement.style.opacity;
-    if((questionHeight<379)&&(questionOpacity<1)){
-        questionHeight = (questionHeight + 1) * 2;
-        questionOpacity = questionOpacity + .05;
-        questionElement.style.height = questionHeight + "px";
-        questionElement.style.opacity = questionOpacity;
-        alert("Down - opacity: " + questionOpacity + " || height: " + questionHeight);
-    }
-    else{
-        clearInterval()
+    validation = answerValidation();
+    if (validation){
+        questionElement.className = "container options transitionOut";
+        setTimeout(function(){
+            questionNumber--;
+            questionElement.className = "container options transitionIn";
+            questionQuestion.innerHTML = questions[questionNumber][0];}, 750);
     }
 }
 
 //Validation
 function answerValidation(){
     //Confirms An Answer Has Been Selected
-    let validation = (optionOne.checked || optionTwo.checked || optionThree.checked || optionFour.checked) ? true : false;
+    if(!(optionOne.checked) || !(optionTwo.checked) || !(optionThree.checked) || !(optionFour.checked)){
+        validation = false;
+    }
+    if(questionNumber<0 || questionNumber>questions.length){
+        validation = false;
+    }
+    else{validation = true;}
+    alert(questionNumber + " " + validation);
     return validation;
 }
 
