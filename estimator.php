@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="theme-color" content="#1890C2">
         
-        <title>BKreative Media Solutions | Brand & Online Marketing</title> 
+        <title>Brand Estimate Calculator | Brand & Online Marketing</title> 
         <meta name="keywords" content="bkreative, media, brand, marketing, print, logo design, web design, web development, responsive design, columbia, sc" />
 		<meta name="description" content="BKreative Media Solutions is your #1 branding & marketing solutions company providing easy, affordable services that give our clients peace of mind & assurance from start to finish." />
 		<meta name="google-site-verification" content="0uXfkBkaQ1ju3RLebflGpm-dK_dKfZ8q8Mbreu5NmAU" />
