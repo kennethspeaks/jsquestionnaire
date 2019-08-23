@@ -1,0 +1,65 @@
+select{
+	appearance:none;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+}
+::selection {
+	background:#17323D;
+	color:#FFFFFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#17323D;
+	color:#FFFFFF;
+	text-shadow:none;
+}
+input[type=text]{
+	appearance:none;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+}
+.team_con {
+	behavior:url(PIE.htc);
+}
+.Socail ul li a {
+	behavior:url(PIE.htc);
+}
+.seminar_con {
+	behavior:url(PIE.htc);
+}
+input,
+textarea { 
+	behavior:url(PIE.htc);
+}
+
+
+/*	
+	box-shadow:2px 0px 0px #000000;
+	-webkit-box-shadow:2px 0px 0px #000000;
+    -moz-box-shadow:2px 0px 0px #000000;
+	behavior:url(PIE.htc);
+	position:relative;
+	
+	transition: all 0.25s ease 0s;
+	-webkit-transition: all 0.25s ease 0s;
+    -moz-transition: all 0.25s ease 0s;
+	
+	border-radius:0 0 2px 2px;
+	-webkit-border-radius:0 0 2px 2px;
+    -moz-border-radius:0 0 2px 2px;
+	behavior:url(PIE.htc);
+	position:relative;
+	
+	font-family: 'avertaextrabold';
+	font-family: 'avertabold';
+	font-family: 'avertaregular_italic';
+	font-family: 'avertasemibold';
+	font-family: 'avertalight';
+	font-family: 'avertalight_italic';
+	
+    font-family: 'averta_regularregular';
+	font-size:14px;
+	font-weight:normal;
+	color:#666666;
+	line-height:200%;
+*/
