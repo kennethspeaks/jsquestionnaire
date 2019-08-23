@@ -163,10 +163,7 @@
         <link href="css/estimator.css" rel="stylesheet" type="text/css"/>
         
         <!-- JavScript -->
-        <script src="js/estimator.js"></script>
-        <script src="js/jquery.back-to-top.min.js"></script>
-        <script src="js/slick.js"></script> 
-        <script src="js/main.js"></script> 
+        <script src="js/estimator.js"></script> 
         <script src="js/wow.js"></script>
         <script>
             new WOW().init();
