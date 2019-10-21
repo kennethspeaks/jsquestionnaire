@@ -18,6 +18,8 @@ var optionOne = document.getElementById('first_option');
 var optionTwo = document.getElementById('second_option');
 var optionThree = document.getElementById('third_option');
 var optionFour = document.getElementById('fourth_option');
+var previousButton = document.getElementById('previous_btn');
+var nextButton = document.getElementById('next_btn');
 
 const questions = [
     ["Q1. What type of branding service are you looking for?", "A1", "A2", "A3", "A4"],
@@ -45,6 +47,10 @@ function nextQuestion(){
             questionNumber++;
             questionElement.className = "container options transitionIn";
             questionQuestion.innerHTML = questions[questionNumber][0];}, 750);
+            if (questionNumber>=0){
+                previousButton.className = "button left active";
+                previousButton.disabled = false;
+            }
     }
 }
 
@@ -56,6 +62,8 @@ function previousQuestion(){
             questionNumber--;
             questionElement.className = "container options transitionIn";
             questionQuestion.innerHTML = questions[questionNumber][0];}, 750);
+            if (questionNumber==0){
+                previousButton.className = "button left disabled";}
     }
 }
 
@@ -63,13 +71,11 @@ function previousQuestion(){
 function answerValidation(){
     //Confirms An Answer Has Been Selected
     if(!(optionOne.checked) || !(optionTwo.checked) || !(optionThree.checked) || !(optionFour.checked)){
-        validation = false;
-    }
+        validation = false;}
     if(questionNumber<0 || questionNumber>questions.length){
-        validation = false;
-    }
-    else{validation = true;}
-        alert(questionNumber + " " + validation);
+        validation = false;}
+    else{
+        validation = true;}
     return validation;
 }
 
