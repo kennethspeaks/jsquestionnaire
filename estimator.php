@@ -124,8 +124,8 @@
                     <div class="price right">Estimated Cost: $<span id="price" class="pink">0.00</span></div>
                 </div>
                 <div class="container buttons">
-                    <div id="previous" class="button left" onClick="previousQuestion();">◄ Back</div>
-                    <div id="next" class="button right" onClick="nextQuestion();">Next ►</div>
+                    <button id="previous" class="button left disabled" disabled onClick="previousQuestion();">◄ Back</button>
+                    <button id="next" class="button right" onClick="nextQuestion();">Next ►</button>
                 </div>
             </div> 
         </section>

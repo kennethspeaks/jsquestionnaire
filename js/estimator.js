@@ -69,7 +69,7 @@ function answerValidation(){
         validation = false;
     }
     else{validation = true;}
-    alert(questionNumber + " " + validation);
+        alert(questionNumber + " " + validation);
     return validation;
 }
 
