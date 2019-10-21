@@ -76,7 +76,7 @@ header{
     height: 100%;
     margin: 0 5%;    
 }
-.container.buttons .button{
+.container.buttons .button.active{
     background-color: #ED2A7A;
     border-radius: 5px;
     padding: 15px;
@@ -84,9 +84,10 @@ header{
     transition: all .2s;
     -webkit-transition: all .2s;
 }
+.container.buttons .button.active:hover{box-shadow: 0 0 5px #888;}
+.container.buttons .button.active:active{/*color: rgb(136, 124, 124);*/ box-shadow: 0 0 5px #000; background-color: #8A969F;}
+
 .container.buttons .button.disabled{background-color: #888888; cursor: not-allowed;}
-.container.buttons .button:hover{box-shadow: 0 0 5px #888;}
-.container.buttons .button:active{/*color: rgb(136, 124, 124);*/ box-shadow: 0 0 5px #000; background-color: #8A969F;}
 
 .option_con{
     border: 2px solid #E4EAED;

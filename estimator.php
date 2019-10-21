@@ -125,7 +125,7 @@
                 </div>
                 <div class="container buttons">
                     <button id="previous" class="button left disabled" disabled onClick="previousQuestion();">◄ Back</button>
-                    <button id="next" class="button right" onClick="nextQuestion();">Next ►</button>
+                    <button id="next" class="button right active" onClick="nextQuestion();">Next ►</button>
                 </div>
             </div> 
         </section>
