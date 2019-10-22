@@ -26,6 +26,11 @@ const questions = [
     ["Q2. Testing Question 2", "A1", "A2", "A3", "A4"],
     ["Q3. Testing Question 3", "A1", "A2", "A3", "A4"],
     ["Q4. Testing Question 4", "A1", "A2", "A3", "A4"],
+    ["Q5. Testing Question 5", "A1", "A2", "A3", "A4"],
+    ["Q6. Testing Question 6", "A1", "A2", "A3", "A4"],
+    ["Q7. Testing Question 7", "A1", "A2", "A3", "A4"],
+    ["Q8. Testing Question 8", "A1", "A2", "A3", "A4"],
+    ["Q9. Testing Question 9", "A1", "A2", "A3", "A4"],
     ["Q10. Testing Question 10", "A1", "A2", "A3", "A4"]
 ];
 
@@ -33,7 +38,7 @@ const questions = [
 /*** Begin Estimator Questionnaire ***/
 /*************************************/
 
-//Question Animations
+//Goes forward to the next question.
 function nextQuestion(){
     validation = answerValidation();
     if (validation){
@@ -52,6 +57,7 @@ function nextQuestion(){
     }
 }
 
+//Goes back to the previous question.
 function previousQuestion(){
     validation = answerValidation();
     if (validation){
@@ -73,10 +79,11 @@ function previousQuestion(){
 //Validation
 function answerValidation(){
     //Confirms An Answer Has Been Selected
-    if(!(optionOne.checked) || !(optionTwo.checked) || !(optionThree.checked) || !(optionFour.checked)){
+    if(!(optionOne.checked) && !(optionTwo.checked) && !(optionThree.checked) && !(optionFour.checked)){
         validation = false;}
-    if(questionNumber<0 || questionNumber>questions.length){
-        validation = false;}
+    else if(questionNumber<0 || questionNumber>questions.length){
+        validation = false;
+        alert("Test2");}
     else{
         validation = true;}
     return validation;
