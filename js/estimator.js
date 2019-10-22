@@ -9,7 +9,7 @@ Version:    1.0.0
 //Estimate Variables
 var price = 0;
 var validation = false;
-var questionNumber = 0;
+var questionNumber = 1;
 
 //Question Element Container
 var questionElement = document.getElementById('options');
@@ -51,6 +51,7 @@ function nextQuestion(){
                 previousButton.className = "button left active";
                 previousButton.disabled = false;
             }
+            alert(questionNumber);
     }
 }
 
@@ -63,7 +64,10 @@ function previousQuestion(){
             questionElement.className = "container options transitionIn";
             questionQuestion.innerHTML = questions[questionNumber][0];}, 750);
             if (questionNumber==0){
-                previousButton.className = "button left disabled";}
+                previousButton.className = "button left disabled";
+                previousButton.disabled = true;
+            }
+            alert(questionNumber);
     }
 }
 
