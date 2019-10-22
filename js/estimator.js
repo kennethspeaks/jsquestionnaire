@@ -9,7 +9,7 @@ Version:    1.0.0
 //Estimate Variables
 var price = 0;
 var validation = false;
-var questionNumber = 1;
+var questionNumber = 0;
 
 //Question Element Container
 var questionElement = document.getElementById('options');
@@ -26,11 +26,6 @@ const questions = [
     ["Q2. Testing Question 2", "A1", "A2", "A3", "A4"],
     ["Q3. Testing Question 3", "A1", "A2", "A3", "A4"],
     ["Q4. Testing Question 4", "A1", "A2", "A3", "A4"],
-    ["Q5. Testing Question 5", "A1", "A2", "A3", "A4"],
-    ["Q6. Testing Question 6", "A1", "A2", "A3", "A4"],
-    ["Q7. Testing Question 7", "A1", "A2", "A3", "A4"],
-    ["Q8. Testing Question 8", "A1", "A2", "A3", "A4"],
-    ["Q9. Testing Question 9", "A1", "A2", "A3", "A4"],
     ["Q10. Testing Question 10", "A1", "A2", "A3", "A4"]
 ];
 
@@ -42,32 +37,36 @@ const questions = [
 function nextQuestion(){
     validation = answerValidation();
     if (validation){
+        questionNumber++;
         questionElement.className = "container options transitionOut";
         setTimeout(function(){
-            questionNumber++;
             questionElement.className = "container options transitionIn";
             questionQuestion.innerHTML = questions[questionNumber][0];}, 750);
-            if (questionNumber>=0){
+            if (questionNumber>0){
                 previousButton.className = "button left active";
                 previousButton.disabled = false;
             }
-            alert(questionNumber);
+            if (questionNumber==(questions.length-1)){
+                nextButton.innerHTML = "Submit ►";
+            }
     }
 }
 
 function previousQuestion(){
     validation = answerValidation();
     if (validation){
+        questionNumber--;
         questionElement.className = "container options transitionOut";
         setTimeout(function(){
-            questionNumber--;
             questionElement.className = "container options transitionIn";
             questionQuestion.innerHTML = questions[questionNumber][0];}, 750);
             if (questionNumber==0){
                 previousButton.className = "button left disabled";
                 previousButton.disabled = true;
             }
-            alert(questionNumber);
+            if (questionNumber<(questions.length-1)){
+                nextButton.innerHTML = "Next ►";
+            }
     }
 }
 
