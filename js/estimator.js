@@ -22,16 +22,16 @@ var previousButton = document.getElementById('previous_btn');
 var nextButton = document.getElementById('next_btn');
 
 const questions = [
-    ["Q1. What type of branding service are you looking for?", "A1", "A2", "A3", "A4"],
-    ["Q2. Testing Question 2", "A1", "A2", "A3", "A4"],
-    ["Q3. Testing Question 3", "A1", "A2", "A3", "A4"],
-    ["Q4. Testing Question 4", "A1", "A2", "A3", "A4"],
-    ["Q5. Testing Question 5", "A1", "A2", "A3", "A4"],
-    ["Q6. Testing Question 6", "A1", "A2", "A3", "A4"],
-    ["Q7. Testing Question 7", "A1", "A2", "A3", "A4"],
-    ["Q8. Testing Question 8", "A1", "A2", "A3", "A4"],
-    ["Q9. Testing Question 9", "A1", "A2", "A3", "A4"],
-    ["Q10. Testing Question 10", "A1", "A2", "A3", "A4"]
+    ["Q1. What type of branding service are you looking for?", "3", "Answer Choice #1", "Answer Choice #2", "Answer Choice #3"],
+    ["Q2. Question #2", "A1", "A2", "A3", "A4"],
+    ["Q3. Question #3", "A1", "A2", "A3", "A4"],
+    ["Q4. Question #4", "A1", "A2", "A3", "A4"],
+    ["Q5. Question #5", "A1", "A2", "A3", "A4"],
+    ["Q6. Question #6", "A1", "A2", "A3", "A4"],
+    ["Q7. Question #7", "A1", "A2", "A3", "A4"],
+    ["Q8. Question #8", "A1", "A2", "A3", "A4"],
+    ["Q9. Question #9", "A1", "A2", "A3", "A4"],
+    ["Q10. Question #10", "A1", "A2", "A3", "A4"]
 ];
 
 /*************************************/
