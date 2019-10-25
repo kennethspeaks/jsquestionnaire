@@ -94,7 +94,7 @@
                     <span class="desc">The Branding Estimate Calculator was created to help potential clients understand their <strong>digital branding cost.</strong></span>
                 </div>
                 <div id="options" class="container options">
-                    <p id="question" class="question">Q1. What type of branding service are you looking for?</p>
+                    <p id="question" class="question">1. What type of branding service are you looking for?</p>
                     <input type="radio" id="first_option" name="options">
                     <label for="first_option" class="option_con target">
                         <img src="" alt="">

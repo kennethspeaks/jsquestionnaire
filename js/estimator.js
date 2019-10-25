@@ -22,16 +22,36 @@ var previousButton = document.getElementById('previous_btn');
 var nextButton = document.getElementById('next_btn');
 
 const questions = [
-    ["Q1. What type of branding service are you looking for?", "3", "Answer Choice #1", "Answer Choice #2", "Answer Choice #3"],
-    ["Q2. Question #2", "A1", "A2", "A3", "A4"],
-    ["Q3. Question #3", "A1", "A2", "A3", "A4"],
-    ["Q4. Question #4", "A1", "A2", "A3", "A4"],
-    ["Q5. Question #5", "A1", "A2", "A3", "A4"],
-    ["Q6. Question #6", "A1", "A2", "A3", "A4"],
-    ["Q7. Question #7", "A1", "A2", "A3", "A4"],
-    ["Q8. Question #8", "A1", "A2", "A3", "A4"],
-    ["Q9. Question #9", "A1", "A2", "A3", "A4"],
-    ["Q10. Question #10", "A1", "A2", "A3", "A4"]
+    {
+        question: "What type of branding service are you looking for?",
+        answers: {a1: "Graphic Services", a2: "Web Services", a3: "Both"},
+        descriptions: {a1: "Answer Choice Description #1", a2: "Answer Choice Description #2", a3: "Answer Choice Description #3"},
+        prices: {p1: 300, p2: 500, p3: 1000}
+    },
+    {
+        question: "What type of branding service are you looking for?",
+        answers: {a1: "Answer Choice #1", a2: "Answer Choice #2", a3: "Answer Choice #3"},
+        descriptions: {a1: "Answer Choice Description #1", a2: "Answer Choice Description #2", a3: "Answer Choice Description #3"},
+        prices: {p1: 0, p2: 0, p3: 0}
+    },
+    {
+        question: "What type of branding service are you looking for?",
+        answers: {a1: "Answer Choice #1", a2: "Answer Choice #2", a3: "Answer Choice #3"},
+        descriptions: {a1: "Answer Choice Description #1", a2: "Answer Choice Description #2", a3: "Answer Choice Description #3"},
+        prices: {p1: 0, p2: 0, p3: 0}
+    },
+    {
+        question: "What type of branding service are you looking for?",
+        answers: {a1: "Answer Choice #1", a2: "Answer Choice #2", a3: "Answer Choice #3"},
+        descriptions: {a1: "Answer Choice Description #1", a2: "Answer Choice Description #2", a3: "Answer Choice Description #3"},
+        prices: {p1: 0, p2: 0, p3: 0}
+    },
+    {
+        question: "What type of branding service are you looking for?",
+        answers: {a1: "Answer Choice #1", a2: "Answer Choice #2", a3: "Answer Choice #3"},
+        descriptions: {a1: "Answer Choice Description #1", a2: "Answer Choice Description #2", a3: "Answer Choice Description #3"},
+        prices: {p1: 0, p2: 0, p3: 0}
+    }
 ];
 
 /*************************************/
@@ -46,7 +66,7 @@ function nextQuestion(){
         questionElement.className = "container options transitionOut";
         setTimeout(function(){
             questionElement.className = "container options transitionIn";
-            questionQuestion.innerHTML = questions[questionNumber][0];}, 750);
+            questionQuestion.innerHTML = (questionNumber+1)+". "+questions[questionNumber].question;}, 750);
             if (questionNumber>0){
                 previousButton.className = "button left active";
                 previousButton.disabled = false;
@@ -65,7 +85,7 @@ function previousQuestion(){
         questionElement.className = "container options transitionOut";
         setTimeout(function(){
             questionElement.className = "container options transitionIn";
-            questionQuestion.innerHTML = questions[questionNumber][0];}, 750);
+            questionQuestion.innerHTML = (questionNumber+1)+". "+questions[questionNumber].question;}, 750);
             if (questionNumber==0){
                 previousButton.className = "button left disabled";
                 previousButton.disabled = true;
