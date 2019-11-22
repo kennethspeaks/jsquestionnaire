@@ -26,31 +26,36 @@ const questions = [
         question: "What type of branding service are you looking for?",
         answers: {a1: "Graphic Services", a2: "Web Services", a3: "Both"},
         descriptions: {a1: "Answer Choice Description #1", a2: "Answer Choice Description #2", a3: "Answer Choice Description #3"},
-        prices: {p1: 300, p2: 500, p3: 1000}
+        prices: {p1: 300, p2: 500, p3: 1000},
+        choice: null
     },
     {
         question: "What type of branding service are you looking for?",
         answers: {a1: "Answer Choice #1", a2: "Answer Choice #2", a3: "Answer Choice #3"},
         descriptions: {a1: "Answer Choice Description #1", a2: "Answer Choice Description #2", a3: "Answer Choice Description #3"},
-        prices: {p1: 0, p2: 0, p3: 0}
+        prices: {p1: 0, p2: 0, p3: 0},
+        choice: null
     },
     {
         question: "What type of branding service are you looking for?",
         answers: {a1: "Answer Choice #1", a2: "Answer Choice #2", a3: "Answer Choice #3"},
         descriptions: {a1: "Answer Choice Description #1", a2: "Answer Choice Description #2", a3: "Answer Choice Description #3"},
-        prices: {p1: 0, p2: 0, p3: 0}
+        prices: {p1: 0, p2: 0, p3: 0},
+        choice: null
     },
     {
         question: "What type of branding service are you looking for?",
         answers: {a1: "Answer Choice #1", a2: "Answer Choice #2", a3: "Answer Choice #3"},
         descriptions: {a1: "Answer Choice Description #1", a2: "Answer Choice Description #2", a3: "Answer Choice Description #3"},
-        prices: {p1: 0, p2: 0, p3: 0}
+        prices: {p1: 0, p2: 0, p3: 0},
+        choice: null
     },
     {
         question: "What type of branding service are you looking for?",
         answers: {a1: "Answer Choice #1", a2: "Answer Choice #2", a3: "Answer Choice #3"},
         descriptions: {a1: "Answer Choice Description #1", a2: "Answer Choice Description #2", a3: "Answer Choice Description #3"},
-        prices: {p1: 0, p2: 0, p3: 0}
+        prices: {p1: 0, p2: 0, p3: 0},
+        choice: null
     }
 ];
 
@@ -62,8 +67,12 @@ const questions = [
 function nextQuestion(){
     validation = answerValidation();
     if (validation){
+        //questions[questionNumber].choice = 
         questionNumber++;
         questionElement.className = "container options transitionOut";
+        if(questions[questionNumber].choice == null){
+            optionOne.checked = optionTwo.checked = optionThree.checked = optionFour.checked = false;
+        }
         setTimeout(function(){
             questionElement.className = "container options transitionIn";
             questionQuestion.innerHTML = (questionNumber+1)+". "+questions[questionNumber].question;}, 750);
@@ -102,8 +111,7 @@ function answerValidation(){
     if(!(optionOne.checked) && !(optionTwo.checked) && !(optionThree.checked) && !(optionFour.checked)){
         validation = false;}
     else if(questionNumber<0 || questionNumber>questions.length){
-        validation = false;
-        alert("Test2");}
+        validation = false;}
     else{
         validation = true;}
     return validation;
